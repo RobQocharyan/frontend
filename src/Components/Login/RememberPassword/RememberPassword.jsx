@@ -16,7 +16,7 @@ export const RememberPassword = () => {
 
 
   const login = ()=>{
-    navigate("/login")
+    navigate("/frontend/login")
 }
 
 const sendMesssagePassword = ()=>{

@@ -17,12 +17,12 @@ export const Login = () => {
     const navigate = useNavigate()
 
     const registration =()=>{
-      navigate("/registration")
+      navigate("/frontend/registration")
     
     }
 
     const rememberPassword  = ()=>{
-      navigate("/rememberPassword")
+      navigate("/frontend/rememberPassword")
 
     }
     const initialValues ={

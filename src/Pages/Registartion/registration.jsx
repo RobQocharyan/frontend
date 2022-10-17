@@ -85,7 +85,7 @@ const Registration = () => {
                         {icons.twitter}
                     </div>
                 </div>
-                <p className='have-profile'>Ունե՞ք անձնական էջ  |  <Link to='/login'>Մուտք</Link></p>
+                <p className='have-profile'>Ունե՞ք անձնական էջ  |  <Link to='/frontend/login'>Մուտք</Link></p>
             </form>
         </div>
     )

@@ -1,0 +1,137 @@
+
+.login{
+    font-family: 'Montserrat', sans-serif;
+    user-select: none;
+    width: 700px;
+    height: 555px;
+    border-radius: 7px;
+    background-color: rgb(249, 249, 249);
+    margin: 0 auto;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+
+    h1{
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 39px;
+        color: rgba(0, 0, 0, 0.8);
+        text-align: center;
+        margin: 30px 294px 15px 293px;
+        font-family: "Montserrat", sans-serif;
+        padding-top: 30px;  
+    }
+
+    .registr{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: rgb(5, 129, 135);
+        cursor: pointer;
+        text-align: center;
+        margin: 0 282px 25px 282px;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .loginForm{
+       
+        input{
+            width: 600px;
+            height: 48px;
+            border-radius: 7px;
+            background-color: rgb(255, 255, 255);
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+            padding: 15px 0 15px 16px;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            margin: 0 50px 15px 50px;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        .rememberMe{
+            width: 13px;
+            height: 13px;
+            border-radius: 3px;
+            border: 1px solid rgba(0, 0, 0, 0.7);
+            padding: 0;
+            margin: 0px 5px 21px 50px;
+        }
+        span{
+            width: 50px;
+            height: 10px;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 15px;
+            color: rgba(0, 0, 0, 0.7);
+            margin-bottom: 10px;
+        }
+
+        button{
+            width: 600px;
+            height: 56px;
+            border-radius: 7px;
+            background-color: rgb(162, 162, 162);
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 25px;
+            color: rgb(255, 255, 255);
+            border: none;
+            font-family: "Montserrat", sans-serif;
+            margin: 0 50px;
+            transition: background-color 0.5s linear;
+
+            &:hover{
+                background-color: 
+                rgba(5, 129, 135, 1);
+            }
+        }
+        .remember{
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 15px;
+            color: rgba(228, 0, 45, 0.6);
+            cursor: pointer;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .error{
+            border: 1px solid red;
+        }
+    }
+
+    .formLine{
+        width: 600px;
+        border: 2px solid rgb(5, 129, 135);
+        margin: 0 50px;
+    }
+
+
+    .formFooter{
+
+        p{
+            margin: 20px 0 20px 51px;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 21px;
+            color: rgb(77, 77, 77);
+            font-family: "Montserrat", sans-serif;
+            letter-spacing: 2px;
+        }
+
+        .icons{
+            display: flex;
+            margin: 0 0 50px 50px;
+            svg{
+                width: 58px;
+                height: 58px;
+                margin-right: 25px;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: rgb(5, 129, 135);
+                    border-radius: 100%;
+                }
+            }
+        }
+    }
+    
+}

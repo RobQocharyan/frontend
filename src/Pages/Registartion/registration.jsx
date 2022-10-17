@@ -1,4 +1,4 @@
-import './Registration.scss';
+import './registration.scss';
 import Form from 'react-bootstrap/Form';
 import { icons } from './icons';
 import { Link } from 'react-router-dom';

@@ -5,6 +5,7 @@ import Registration from './Pages/Registartion/Registration';
 import { RememberPassword } from './Components/Login/RememberPassword/RememberPassword';
 import { MessagePassword } from './Components/Login/RememberPassword/MessagePassword/MessagePassword';
 import { NewPassword } from './Components/Login/RememberPassword/NewPassword/NewPassword';
+import { SuccessPassword } from './Components/Login/RememberPassword/SuccessPassword/SuccessPassword';
 
 export const ProjectRoutes = () => {
     return(
@@ -14,7 +15,7 @@ export const ProjectRoutes = () => {
                     <Route path="/" element={'asd'}/>
                     <Route path="/login" element={<Login />}/>
                     <Route path="/registration" element={<Registration />}/>
-                    <Route path="/rememberPassword" element={<RememberPassword />}/>
+                    <Route path="/rememberPassword" element={<SuccessPassword />}/>
                     {/* <Route path="/messagePassword" element={<MessagePassword />}/> */}
 
                     <Route path="/messagePassword" element={<NewPassword />}/>

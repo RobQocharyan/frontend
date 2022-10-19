@@ -127,6 +127,7 @@ $fontfamily: 'Montserrat', sans-serif;
                     accent-color: red;
                     width: 15px;
                     height: 15px;
+                    cursor: pointer;
                 }
                 label {
                     font-family: $fontfamily;
@@ -139,6 +140,7 @@ $fontfamily: 'Montserrat', sans-serif;
                     margin-right: 8px;
                     display: inline-flex;
                     align-items: center;
+                    cursor: pointer;
                 }
             }
             .select {
@@ -195,6 +197,10 @@ $fontfamily: 'Montserrat', sans-serif;
             &-icons {
                 svg {
                     margin: 8px;
+                    cursor: pointer;
+                    @media screen and (max-width: 375px) {
+                        width: 40px;                        
+                    }
                 }
             }
         }

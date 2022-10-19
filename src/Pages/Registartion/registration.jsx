@@ -53,15 +53,15 @@ const Registration = () => {
                     </div>
 
                     <div className='select' >
-                        <Form.Select aria-label="Default select example" className='input'>
-                            <option disabled select={'true'} hidden>Երկիր</option>
+                        <Form.Select aria-label="Default select example" className='input' defaultValue={'Երկիր'}>
+                            <option disabled hidden value={'Երկիր'}>Երկիր</option>
                             <option defaultValue="Հայաստան">Հայաստան</option>
                             <option defaultValue="Ռուսաստան">Ռուսաստան</option>
                             <option defaultValue="ԱՄՆ">ԱՄՆ</option>
                             <option defaultValue="Կանադա">Կանադա</option>
                         </Form.Select>
-                        <Form.Select aria-label="Default select example" className='input'>
-                            <option disabled select={'true'} hidden>Քաղաք / մարզ</option>
+                        <Form.Select aria-label="Default select example" className='input' defaultValue={'Քաղաք / մարզ'}>
+                            <option disabled hidden value={'Քաղաք / մարզ'}>Քաղաք / մարզ</option>
                             <option defaultValue="Երևան">Երևան</option>
                             <option defaultValue="Մոսկվա">Մոսկվա</option>
                             <option defaultValue="New York">New York</option>

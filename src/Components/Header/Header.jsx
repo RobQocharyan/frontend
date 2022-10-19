@@ -1,46 +1,61 @@
 
-import "./Header.scss"
-import React from 'react'
-import { Link,useNavigate } from 'react-router-dom';
+import "./Header.scss";
+import { Link } from 'react-router-dom';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { useState } from "react";
 
 
 export const Header = () => {
+  const [mobile, setMobile] = useState('mobile hide');
 
-  const login = ()=>{
-    navigate("/frontend/login")
-}
-
-const navigate = useNavigate()
-
-const registration =()=>{
-  navigate("/frontend/registration")
-
-}
-
+  const openMobile = () => {
+    if (mobile === 'mobile') {
+      setMobile('mobile hide')
+    } else {
+      setMobile('mobile')
+    }
+  }
 
   return (
-    <div className="header">
-      <div className="headerFirst">
-          <img src={require("../../img/logo.png")} alt="" />
+    <header className="">
+    <div className="header navbar container-fluid ">
+      <div className="logo">
+        <Link to='/frontend'>
+          <img src={require("../../img/logo.png")} alt="" className="navbar-brand" />          
+        </Link>
       </div>
-      <div className="headerSecond">
-        <nav>
+      <div className="menu-btns d-flex">
+        <div className="menu">
           <ul>
             <li><Link to={"/"}>Նկարահանում</Link></li>
             <li><Link to={"/"}>Ապրանք</Link></li>
             <li><Link to={"/"}>Գործ&nbsp;կա</Link></li>
             <li><Link to={"/"}>Ֆորում</Link></li>
-            <li><Link to={"/"}>Օգտատեր</Link></li>
           </ul>
-        </nav>
-      </div>
-      <div className="headerThree">
-        <i className="fa fa-search icon"></i>
-        <input type="text" name="search" placeholder="Որոնում" />
-        <span onClick={login}>Մուտք</span>
-        <button onClick={registration}>Գրանցում</button>
+        </div>
+        <div className="btn-section">
+          <div className="search-section">
+            <i className="fa fa-search icon"></i>
+            <input type="text" name="search" placeholder="Որոնում" />
+          </div>
+          <div className="round"></div>
+          <div className="header-buttons">
+            <Link to="/frontend/login" className="log-btn">Մուտք</Link>
+            <Link to="/frontend/registration" className="registr-btn">Գրանցում</Link>
+          </div>          
+        </div>
+        <div className="mobile-menu">
+          <GiHamburgerMenu className="burger-icon" onClick={openMobile} />
+          <ul className={mobile}>
+            <li><Link to={"/"}>Նկարահանում</Link></li>
+            <li><Link to={"/"}>Ապրանք</Link></li>
+            <li><Link to={"/"}>Գործ&nbsp;կա</Link></li>
+            <li><Link to={"/"}>Ֆորում</Link></li>
+          </ul>
+        </div>
+        
       </div>
     </div>
+    </header>
   )
 }
-

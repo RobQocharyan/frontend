@@ -11,12 +11,11 @@ export const ProjectRoutes = () => {
     return(
         <div>
             <Routes>
-                <Route path="/" element={<MainLayout/>}>
-                    <Route path="/" element={'asd'}/>
-                    <Route path="/login" element={<Login />}/>
-                    <Route path="/registration" element={<Registration />}/>
-                    <Route path="/rememberPassword" element={<RememberPassword />}/>
-                    <Route path="/messagePassword" element={<NewPassword />}/>
+                <Route path="/frontend" element={<MainLayout/>}>
+                    <Route path="/frontend/login" element={<Login />}/>
+                    <Route path="/frontend/registration" element={<Registration />}/>
+                    <Route path="/frontend/rememberPassword" element={<RememberPassword />}/>
+                    <Route path="/frontend/messagePassword" element={<NewPassword />}/>
 
                     {/* <Route path="/messagePassword" element={<NewPassword />}/> */}
                 </Route>

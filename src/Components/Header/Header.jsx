@@ -7,13 +7,13 @@ import { Link,useNavigate } from 'react-router-dom';
 export const Header = () => {
 
   const login = ()=>{
-    navigate("/login")
+    navigate("/frontend/login")
 }
 
 const navigate = useNavigate()
 
 const registration =()=>{
-  navigate("/registration")
+  navigate("/frontend/registration")
 
 }
 

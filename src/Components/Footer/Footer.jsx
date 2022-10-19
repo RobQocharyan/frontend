@@ -1,26 +1,28 @@
-import "./Footer.scss"
-
+import "./Footer.scss";
 
 import React from 'react'
+import { icons as footIcons } from "./icons";
 import { icons } from './../../Pages/Registartion/icons';
 import { Link } from 'react-router-dom';
 
 export const Footer = () => {
   return (
-    <div className="footer">
-        <div className="footerFirst">
+    <footer className="container-fluid">
+      <div className="container ">
+        <div className="row">
+        <div className="footerFirst col-md-4 col-sm-4">
           <div className="footerImg">
             <img src={require("../../img/logo.png")} alt="" />
           </div>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
           <h2>Հետևեք մեզ</h2>
           <div className="icons">
-            <img src={require("../../img/icons/instagram.png")} alt="" className="instagram" />
-            {icons.facebookFooter}
-            <img src={require("../../img/icons/mail.png")} alt="" className="mail" />
+            <div>{footIcons.footerInstagram}</div>
+            <div>{footIcons.footerFacebook}</div>
+            <div>{footIcons.footerMail}</div>            
           </div>
         </div>
-        <div className="footerSecond">
+        <div className="footerSecond col- col-md-4 col-sm-4">
             <h3>Հետադարձ կապ</h3>
             <ul>
               <li><Link to={"/"}>Հետադարձ կապ</Link></li>
@@ -30,7 +32,7 @@ export const Footer = () => {
               <li><Link to={"/"}>Օգնություն </Link></li>
             </ul>
         </div>
-        <div className="footerThre">
+        <div className="footerThree col-md-4 col-sm-4">
           <h3>Հետադարձ կապ</h3>
           <div>
             {icons.phone}
@@ -41,6 +43,8 @@ export const Footer = () => {
             <span>Kadr.photo@gmail.com</span>
           </div>
         </div>
-    </div>
+        </div>
+      </div>
+    </footer>
   )
 }

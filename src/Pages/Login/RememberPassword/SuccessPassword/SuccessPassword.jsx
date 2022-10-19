@@ -1,7 +1,7 @@
 import "./SuccessPassword.scss";
 
 import React from 'react'
-import { icons } from './../../../../Pages/Registartion/icons';
+import { icons } from '../../../Registartion/icons';
 
 export const SuccessPassword = () => {
   return (

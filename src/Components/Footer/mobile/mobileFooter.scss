@@ -1,0 +1,101 @@
+.mobile-footer {
+    padding: 0 45px;
+    display: none;
+    .accordions {
+        .accordion {
+            &-item {
+                border: none;
+                background-color: transparent;
+                .accordion-header {
+                    .accordion-title {                        
+                        font-family: sans-serif;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 20px;
+                        line-height: 205%;
+                        color: #000000;
+                        margin: 5px 0;
+                    }
+                    button {
+                        padding: 0;
+                        background-color: transparent;
+                        box-shadow: none;
+                    }
+                }
+                .accordion-body {
+                    padding: 0;
+                    ul {
+                        list-style: none;
+                        padding: 0;
+                        li {
+                            padding: 0;
+                            a {
+                                font-family: 'Montserrat arm';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 15px;
+                                line-height: 205%;
+                                color: #000000;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                    svg {
+                        margin-right:15px;
+                    }
+                }
+            }
+        }
+    }
+    .follow_US {
+        margin: 25px 0;
+        h2 {
+            font-family: 'Montserrat arm';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 205%;
+            color: #000000;
+            margin: 0;
+        }
+        .icons {
+            display: flex;
+            div {
+                margin: 0 10px 0 0;
+                img {
+                    width: 30px;
+                }
+            }
+        }
+    }
+    .logo {
+        border-top: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 45px 0 0 0;
+
+        img {
+            margin-bottom: 20px;
+        }
+
+        .underLogo {
+            max-width: 400px;
+            font-family: 'Segoe UI';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 20px;
+            text-align: center;
+            color: #000000;
+        }
+    }
+
+    @media screen and (max-width: 425px) {
+        padding: 0 15px;        
+    }
+
+    @media screen and (max-width: 375px) {
+        padding: 0 10px;        
+    }
+}

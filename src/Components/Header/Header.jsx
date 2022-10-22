@@ -1,12 +1,28 @@
 import "./Header.scss";
 import { Link } from 'react-router-dom';
+
+import { useState } from "react";
+import { GiHamburgerMenu } from 'react-icons/gi';
 import Mobile from "./mobile";
+
+
+export const Header1 = () => {
+  const [mobile, setMobile] = useState('mobile hide');
+  const openMobile = () => {
+    if (mobile === 'mobile') {
+      setMobile('mobile hide')
+    } else {
+      setMobile('mobile')
+    }
+  }
+}
+  
 
 
 export const Header = () => {
 
   return (
-    <header className="">
+    <header>
     <div className="header navbar container-fluid ">
       <div className="logo">
         <Link to='/frontend'>

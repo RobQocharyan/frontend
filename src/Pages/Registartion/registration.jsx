@@ -71,7 +71,7 @@ const Registration = () => {
                         <input type="checkbox" id='agree'/>
                         <label htmlFor="agree" className='agree'>
                             Համաձայն եմ հայտարարությունների հրապարակման կանոններին,
-                            նաև Kadr.am կայքի օգտագործման համաձայնագրին:
+                            նաև Kadr.am կայքի <Link to={"/frontend/rules"}>օգտագործման համաձայնագրին:</Link>
                         </label>
                     </div>                    
                 </div>

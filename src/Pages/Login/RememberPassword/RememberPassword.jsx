@@ -20,7 +20,7 @@ export const RememberPassword = () => {
 }
 
 const sendMesssagePassword = ()=>{
-  navigate("/messagePassword")
+  navigate("/frontend/messagePassword")
 
 }
 

@@ -4,37 +4,38 @@ import React from "react";
 import { useState } from "react";
 
 export const Rules = () => {
-  const [arrow, setArrow] = useState(false);
 
-  const button = () => {
-    if (!arrow) {
-      setArrow(true);
-    } else {
-      setArrow(false);
-    }
+  const objLink = {
+    activeObject:null,
+    objects:[
+      {id:1,title:"Օգտագործման համաձայնագիր",href:"#one"},
+      {id:2,title:"Կայքում արգելվում է",href:"#two"},
+      {id:3,title:"Պատասխանատվության սահմանափակումը",href:"#thre"},
+      {id:4,title:"Մեր մասին",href:"#four"},
+      {id:5,title:"Համաձայնագրի ժամկետը",href:"#five"}
+    ]
+  }
+  const [active, setActive] = useState(objLink);
+
+  const activeDiv = (index) => {
+    setActive({...active,activeObject:active.objects[index]})
   };
 
+  const activeline = (index)=>{
+    if(active.objects[index]===active.activeObject){
+      return "active"
+    }else{
+      return ""
+    }
+  }
+  
   return (
     <div className="rules">
       <div className="rulesDivone">
           <div className="rulesContent">
-            <ul>
-              <li>
-                <a href="#one">Օգտագործման համաձայնագիր</a>
-              </li>
-              <li>
-                <a href="#two">Կայքում արգելվում է</a>
-              </li>
-              <li>
-                <a href="#thre">Պատասխանատվության սահմանափակումը</a>
-              </li>
-              <li>
-                <a href="#four">Մեր մասին</a>
-              </li>
-              <li>
-                <a href="#five">Համաձայնագրի ժամկետը</a>
-              </li>
-            </ul>
+            {active.objects.map((div,index)=>{
+              return <div key={index} onClick={(a)=>activeDiv(index)} className={activeline(index)} ><a href={div.href}>{div.title}</a></div>
+            })}
           </div>
       </div>
       <div className="rulesDivTwo">

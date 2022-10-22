@@ -1,13 +1,12 @@
 
 import "./Header.scss";
 import { Link } from 'react-router-dom';
-import { GiHamburgerMenu } from 'react-icons/gi';
 import { useState } from "react";
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 
 export const Header = () => {
   const [mobile, setMobile] = useState('mobile hide');
-
   const openMobile = () => {
     if (mobile === 'mobile') {
       setMobile('mobile hide')

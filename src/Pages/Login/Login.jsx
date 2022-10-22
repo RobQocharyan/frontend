@@ -36,7 +36,7 @@ export const Login = () => {
     <div className="login-page">
       <div className="login">
           <p className="title">Մուտք</p>
-          <div className="registr" onClick={registration}>Ստեղծել նոր էջ</div>
+          
           <div className="loginForm">
           <Formik
             initialValues={initialValues}
@@ -53,16 +53,21 @@ export const Login = () => {
 
             <div className="d-flex justify-content-start my-3">            
                 <Field name="checkbox" type="checkbox" id="rememberMe"className="rememberMe" />
-                <label htmlFor="rememberMe">Հիշել</label>
+                <div className="checkboxDiv">
+                  <label htmlFor="rememberMe">Հիշել</label>
+                  <p className="remember" onClick={rememberPassword}>Մոռացել եք ?</p>
+                </div>
+                
             </div>
 
             <button type="submit" disabled={!isValid}>Մուտք</button>
-            <p className="remember" onClick={rememberPassword}>Մոռացել ե՞ք</p>
+           
           </Form>
         )}
       </Formik>
       <div className="formLine"></div>
       <div className="formFooter">
+        <div>
           <p>Մուտք սոց. ցանցերի միջոցով</p>
           <div className="icons">
               {icons.google}
@@ -70,7 +75,13 @@ export const Login = () => {
               {icons.instagram}
               {icons.twitter}
           </div>
-      </div>
+        </div>
+          
+
+          <div>
+            <div className="registr" onClick={registration}>Ստեղծել նոր էջ</div>
+            </div>
+          </div>
           </div>
       </div>
     </div>

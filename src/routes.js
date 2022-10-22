@@ -6,6 +6,9 @@ import { RememberPassword } from "./Pages/Login/RememberPassword/RememberPasswor
 // import { MessagePassword } from './Components/Login/RememberPassword/MessagePassword/MessagePassword';
 // import { NewPassword } from './Components/Login/RememberPassword/NewPassword/NewPassword';
 import { SuccessPassword } from "./Pages/Login/RememberPassword/SuccessPassword/SuccessPassword";
+import { Rules } from './Components/Rules/Rules';
+import { NewPassword } from './Pages/Login/RememberPassword/NewPassword/NewPassword';
+import { MessagePassword } from './Pages/Login/RememberPassword/MessagePassword/MessagePassword';
 
 export const ProjectRoutes = () => {
     return(
@@ -15,9 +18,9 @@ export const ProjectRoutes = () => {
                     <Route path="/frontend/login" element={<Login />}/>
                     <Route path="/frontend/registration" element={<Registration />}/>
                     <Route path="/frontend/rememberPassword" element={<RememberPassword />}/>
-                    {/* <Route path="/frontend/messagePassword" element={<NewPassword />}/> */}
+                    <Route path="/frontend/rules" element={<Rules />}/>
 
-                    {/* <Route path="/messagePassword" element={<NewPassword />}/> */}
+                    <Route path="/frontend/messagePassword" element={<SuccessPassword />}/>
                 </Route>
             </Routes>
         </div>

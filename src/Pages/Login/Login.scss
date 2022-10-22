@@ -49,6 +49,7 @@
                 
             }
 
+
             .checkboxDiv{
                 max-width: 600px;
                 width: 100%;
@@ -64,6 +65,14 @@
                     line-height: 15px;
                     color: rgba(0, 0, 0, 0.7);
                 }
+            label{
+                width: 50px;
+                height: 10px;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 15px;
+                color: rgba(0, 0, 0, 0.7);
+            }
     
                 .remember{
                     font-weight: 400;
@@ -139,6 +148,10 @@
                 svg{    
                     width: 44px;
                     height: 44px;
+    
+                svg{
+                    width: 58px;
+                    height: 58px;
                     margin: 8px;
                     cursor: pointer;
                     &:nth-child(1){
@@ -160,4 +173,4 @@
             padding: 30px 20px;       
         }
     }
-}
+    }}

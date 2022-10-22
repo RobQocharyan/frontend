@@ -1,12 +1,12 @@
-
 import "./Header.scss";
 import { Link } from 'react-router-dom';
 
 import { useState } from "react";
 import { GiHamburgerMenu } from 'react-icons/gi';
+import Mobile from "./mobile";
 
 
-export const Header = () => {
+export const Header1 = () => {
   const [mobile, setMobile] = useState('mobile hide');
   const openMobile = () => {
     if (mobile === 'mobile') {
@@ -15,7 +15,11 @@ export const Header = () => {
       setMobile('mobile')
     }
   }
+}
   
+
+
+export const Header = () => {
 
   return (
     <header>
@@ -45,16 +49,7 @@ export const Header = () => {
             <Link to="/frontend/registration" className="registr-btn">Գրանցում</Link>
           </div>          
         </div>
-        <div className="mobile-menu">
-          <GiHamburgerMenu className="burger-icon" onClick={openMobile} />
-          <ul className={mobile}>
-            <li><Link to={"/"}>Նկարահանում</Link></li>
-            <li><Link to={"/"}>Ապրանք</Link></li>
-            <li><Link to={"/"}>Գործ&nbsp;կա</Link></li>
-            <li><Link to={"/"}>Ֆորում</Link></li>
-          </ul>
-        </div>
-        
+        <Mobile />
       </div>
     </div>
     </header>

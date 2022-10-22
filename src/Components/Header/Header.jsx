@@ -1,6 +1,7 @@
 
 import "./Header.scss";
 import { Link } from 'react-router-dom';
+
 import { useState } from "react";
 import { GiHamburgerMenu } from 'react-icons/gi';
 
@@ -14,6 +15,7 @@ export const Header = () => {
       setMobile('mobile')
     }
   }
+  
 
   return (
     <header>

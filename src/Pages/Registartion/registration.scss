@@ -142,6 +142,13 @@ $fontfamily: 'Montserrat', sans-serif;
                     align-items: center;
                     cursor: pointer;
                 }
+
+                label.exp-year {
+                    @media screen and (max-width: 490px) {
+                        display: block;
+                        margin: 5px 0;                        
+                    }
+                }
             }
             .select {
                 select {
@@ -160,14 +167,21 @@ $fontfamily: 'Montserrat', sans-serif;
                 height: 13px;
                 border: 1px solid red;
                 margin-top: 15px;
-
-                //#4D4D4D
             }
 
             label.agree {
                 @include textstyle;
                 margin-left: 10px;
                 max-width: 493px;
+
+                a {
+                    text-decoration: none;
+                    color: inherit;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
             }
         }
 

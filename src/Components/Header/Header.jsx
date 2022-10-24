@@ -1,28 +1,19 @@
 import "./Header.scss";
 import { Link } from 'react-router-dom';
-
 import { useState } from "react";
-import { GiHamburgerMenu } from 'react-icons/gi';
 import Mobile from "./mobile";
 
 
-export const Header1 = () => {
-  const [mobile, setMobile] = useState('mobile hide');
-  const openMobile = () => {
-    if (mobile === 'mobile') {
-      setMobile('mobile hide')
-    } else {
-      setMobile('mobile')
-    }
-  }
-}
-  
-
-
 export const Header = () => {
-
+  const [headerClass, setHeaderClass] = useState('');
+  
+  window.addEventListener('scroll', () => { 
+    if (window.scrollY >= 50) {
+      setHeaderClass('white')
+    }
+  })
   return (
-    <header>
+    <header className={headerClass}>
     <div className="header navbar container-fluid ">
       <div className="logo">
         <Link to='/frontend'>
@@ -43,7 +34,6 @@ export const Header = () => {
             <i className="fa fa-search icon"></i>
             <input type="text" name="search" placeholder="Որոնում" />
           </div>
-          <div className="round"></div>
           <div className="header-buttons">
             <Link to="/frontend/login" className="log-btn">Մուտք</Link>
             <Link to="/frontend/registration" className="registr-btn">Գրանցում</Link>

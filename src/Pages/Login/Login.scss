@@ -116,61 +116,73 @@
         }
     
     
-        .formFooter{
+        .formFooter {
             padding: 20px 0;
-            display: flex;
-            justify-content: space-between;
-    
-            p{
-                font-family: 'Montserrat arm';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 18px;
-                line-height: 22px;
-                color: rgba(77, 77, 77, 1);
-                letter-spacing: 2px;
-            }
-            
-        .registr{        
-            text-align: center;
-            font-family: 'Montserrat arm';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 19px;
-            color: #058187;
-            cursor: pointer;
-            letter-spacing: 1px;
-        }
-            .icons{
-                    
+            .ttext {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row-reverse;
+
                 
-                svg{    
-                    width: 44px;
-                    height: 44px;
-    
-                svg{
-                    width: 58px;
-                    height: 58px;
+                .registr{
+                    font-family: 'Montserrat arm';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: #058187;
+                    cursor: pointer;
+                    letter-spacing: 1px;
+                    margin-left: auto;
+
+                    @media screen and (max-width: 425px) {
+                        font-size: 14px;
+                    }
+                }
+
+                p{
+                    font-family: 'Montserrat arm';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 22px;
+                    color: rgba(77, 77, 77, 1);
+                    letter-spacing: 2px;
+
+                    @media screen and (max-width: 425px) {
+                        font-size: 16px;
+                        margin-top: 10px;
+                    }
+
+                    @media screen and (max-width: 369px) {
+                        font-size: 14px;
+                        letter-spacing: 0.02rem;                     
+                    }
+                }
+
+                @media screen and (max-width: 615px) {
+                    flex-direction: column;
+                    
+                }
+            }
+
+
+            .icons {
+                svg {
                     margin: 8px;
                     cursor: pointer;
-                    &:nth-child(1){
-                        margin: 0;
-                        padding: 0;
-                    }
-                    @media screen and (max-width: 375px) {
+                    @media screen and (max-width: 365px) {
                         width: 40px;                        
                     }
                 }
             }
         }
-    
-        @media screen and (max-width: 590px) {
-            padding: 30px;       
-        }
-    
-        @media screen and (max-width: 395px) {
-            padding: 30px 20px;       
-        }
+    @media screen and (max-width: 590px) {
+        padding: 30px;       
     }
-    }}
+
+    @media screen and (max-width: 395px) {
+        padding: 30px 20px;       
+    }
+}
+}

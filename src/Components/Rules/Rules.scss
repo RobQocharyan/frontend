@@ -4,69 +4,70 @@
     font-family: 'Montserrat', sans-serif;
     user-select: none;
     display: flex;
-    .rulesDivone{
+   
+    &__menu{
         margin: 60px 0 0 70px;
         position: fixed;
-
-        .rulesContent{
-            width: 377px;
-            height: 215px;
-            background-color: 
-            rgba(255, 255, 255, 1);
-            border-radius: 14px;
-            box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-                &:first-child{
-                    padding-top: 10px;
-                    margin-top: 0;
-                &:last-child{
-                    padding-bottom: 10px;
-                    margin-bottom: 0;
-                }
-
-                div{
-                    width: 349px;
-                    height: 27px;
-                    margin-bottom: 15px;
-                    padding: 5px 0 0 18px;
-                    
-                }
-                .active{
-                    border-left: 2px solid rgba(5, 129, 135, 1);
-                }
-                    a{
-                        font-weight: 400;
-                        font-size: 14px;
-                        text-decoration: none;
-                        line-height: 14px;
-                        color: rgba(0, 0, 0, 0.8);
-
-                        &:active{
-                            color: red;
-                        }
-
-                        &:hover{
-                            color: 
-                            rgba(5, 129, 135, 1);
-                        }
-                    }
+    }
+ 
+    &__content{
+        width: 377px;
+        height: 215px;
+        background-color: 
+        rgba(255, 255, 255, 1);
+        border-radius: 14px;
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+            &:first-child{
+                padding-top: 10px;
+                margin-top: 0;
+            &:last-child{
+                padding-bottom: 10px;
+                margin-bottom: 0;
             }
+         
+            div{
+                width: 349px;
+                height: 27px;
+                margin-bottom: 15px;
+                padding: 5px 0 0 18px;
+                
+            }
+            .active{
+                border-left: 2px solid rgba(5, 129, 135, 1);
+            }
+                a{
+                    font-weight: 400;
+                    font-size: 14px;
+                    text-decoration: none;
+                    line-height: 14px;
+                    color: rgba(0, 0, 0, 0.8);
 
-            
+                    &:active{
+                        color: red;
+                    }
+
+                    &:hover{
+                        color: 
+                        rgba(5, 129, 135, 1);
+                    }
+                }
         }
+
         
     }
-
+    
     
 
-    .rulesDivTwo{
-        width: 800px;
+    &__section{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        max-width: 800px;
         height: 2820px;
         border-radius: 7px;
         background-color: rgba(255, 255, 255, 1);
         box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
         margin: 60px 70px 142px 472px;
-        display: flex;
-        flex-direction: column;
         h2{
             font-size: 24px;
             font-weight: 400;
@@ -80,7 +81,9 @@
             font-size: 14px;
             line-height: 21px;
             color: rgba(34, 34, 34, 1);
-
+        }
+        ul{
+            margin: 0;
         }
 
         h1{
@@ -89,42 +92,20 @@
             line-height: 34px;
             color: 
             rgba(0, 0, 0, 0.9);
-            margin: 20px 0 0 28px;
+            margin: 20px 0 10px 28px;
 
         }
-        .agreement{
-            margin: 20px 27px 0 28px;
-            width: 755px;
-            height: 593px;
+        &__agreement{
+            width: 100%;
+            max-width: 755px;
+            margin: 10px 27px 0 28px;
         }
         
-        .prohibited{
-            margin: 154px 0 27px 28px;
+        div{
             width: 755px;
-            height: 371px;
-            }
+            margin: 0 27px 0 28px;
 
-        .restriction{
-            margin: 124px 0 0 28px;
-            width: 755px;
-            height: 484px;
-            }
-
-        .forme{
-            margin: 68px 0 27px 28px;
-            width: 755px;
-            height: 474px;
-            .textforme{
-                margin-bottom: 0;
-            }
-            ul{
-                margin: 0;
-            }
         }
-        .term{
-            margin: 24px 0 81px 28px;
-            width: 755px;
-            height: 236px;
         }
 
         .pdf{
@@ -135,5 +116,5 @@
                 cursor: pointer;
             }
         }
-        }
-    }
+}
+        

@@ -1,56 +1,96 @@
 import "./Rules.scss";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
+
+const objLink = {
+  activeObject:null,
+  objects:[
+    {id:1,title:"Օգտագործման համաձայնագիր",href:"#one",text:"2px solid rgba(5, 129, 135, 1);"},
+    {id:2,title:"Կայքում արգելվում է",href:"#two",text:"2px solid rgba(5, 129, 135, 1);"},
+    {id:3,title:"Պատասխանատվության սահմանափակումը",href:"#thre",text:"2px solid rgba(5, 129, 135, 1);"},
+    {id:4,title:"Մեր մասին",href:"#four",text:"2px solid rgba(5, 129, 135, 1);"},
+    {id:5,title:"Համաձայնագրի ժամկետը",href:"#five",text:"2px solid rgba(5, 129, 135, 1);"}
+  ]
+}
 
 export const Rules = () => {
 
-  const objLink = {
-    activeObject:null,
-    objects:[
-      {id:1,title:"Օգտագործման համաձայնագիր",href:"#one"},
-      {id:2,title:"Կայքում արգելվում է",href:"#two"},
-      {id:3,title:"Պատասխանատվության սահմանափակումը",href:"#thre"},
-      {id:4,title:"Մեր մասին",href:"#four"},
-      {id:5,title:"Համաձայնագրի ժամկետը",href:"#five"}
-    ]
-  }
-  const [active, setActive] = useState(objLink);
 
-  const activeDiv = (index) => {
-    setActive({...active,activeObject:active.objects[index]})
-  };
+const [active, setActive] = useState(objLink);
+ 
 
-  const activeline = (index)=>{
-    if(active.objects[index]===active.activeObject){
-      return "active"
-    }else{
-      return ""
+
+  //this function should me  
+
+  // const activeDiv = (index) => {
+  //   setActive({...active,activeObject:active.objects[index]})
+  // };
+  // const activeline = (id)=>{
+  //   if(active.objects[id]===active.activeObject){
+  //     return "active"
+  //   }else{
+  //     return ""
+  //   }
+  // }
+
+
+  function scrollFunction(){
+    const scrollTop = window.scrollY
+    let a = scrollTop
+    let divzero = document.getElementById("div0")
+    let divone = document.getElementById("div1")
+    let divtwo = document.getElementById("div2")
+    let divthree = document.getElementById("div3")
+    let divfour = document.getElementById("div4")
+
+    if(scrollTop<750){
+        divzero.className = 'active'
+        divone.className = ''
+    }else if(scrollTop>750 && a<1370){
+      divzero.className = ''
+      divtwo.className = ''
+      divone.className = 'active'
+    }else if(scrollTop>1371 && a<1856){
+      divone.className = ''
+      divthree.className = ''
+      divtwo.className = 'active'
+    }else if(scrollTop>1857 && a<2228){
+      divtwo.className = ''
+      divfour.className = ''
+      divthree.className = 'active'
+    }else if(scrollTop>2357 && a<2462){
+      divthree.className = ''
+      divfour.className = 'active'
     }
+   
+
   }
+  useEffect(()=>{
+    window.addEventListener('scroll',scrollFunction)
+  })
   
   return (
     <div className="rules">
-      <div className="rulesDivone">
-          <div className="rulesContent">
+      <div className="rules__menu">
+          <div className="rules__content">
             {active.objects.map((div,index)=>{
-              return <div key={index} onClick={(a)=>activeDiv(index)} className={activeline(index)} ><a href={div.href}>{div.title}</a></div>
+              return <div
+               key={index} id={`div${index}`}  ><a href={div.href}>{div.title}</a></div>
             })}
           </div>
       </div>
-      <div className="rulesDivTwo">
+      <div className="rules__section">
         <h1 id="one">Օգտագործման համաձայնագիր</h1>
 
-        <div className="agreement">
+        <div className="rules__agreement" id="rulesone" >
           <p>
             Հարգելի' այցելու, ողջունում ենք Ձեզ Kadr.am կայքում:
-            <br />
             Գրանցվելով Kadr.am կայքում՝ դուք պարտադիր պետք է տաք Ձեր
             համաձայնությունը՝ նշելով հաստատման կոճակի վրա, այսպիսով ենթարկվելով
             կայքի կողմից ամրագրված պահանջներին և կանոններին, իսկ դրանց խախտման
             դեպքում Դուք կկրեք պատասխանատվություն՝ անկախ այն բանից Դուք
             կարդացե՞լ եք համաձայնագիրը հաստատելուց առաջ,թե ոչ:
-            <br />
             Դուք կրում եք պատասխանատվություն նաև Ձեր մասին տրամադրված ամբողջ
             տեղեկատվության արժանահավատության համար:Հարգելի' այցելու, ողջունում
             ենք Ձեզ Kadr.am կայքում: Գրանցվելով Kadr.am կայքում՝ դուք պարտադիր
@@ -61,8 +101,9 @@ export const Rules = () => {
             ոչ: Դուք կրում եք պատասխանատվություն նաև Ձեր մասին տրամադրված ամբողջ
             տեղեկատվության արժանահավատության համար:
           </p>
-          <h2>Կողմերի իրավունքներն ու պարտականութունները</h2>
 
+          <h2>Կողմերի իրավունքներն ու պարտականութունները</h2>
+          
           <p>
             Օգտվելով Kadr.am-ի ծառայություններից` Դուք հաստատում եք այն, որ Ձեր
             կողմից տեղադրված նկարների, տեսանյութերի բովանդակության համար կրում
@@ -96,7 +137,7 @@ export const Rules = () => {
             են առաջանալ կայքի օգտագործման ընթացքում:
           </p>
         </div>
-        <div className="prohibited">
+        <div id="rulestwo">
           <h2 id="two">Կայքում արգելվում է</h2>
           <ol>
             <li>
@@ -149,7 +190,7 @@ export const Rules = () => {
           </ol>
         </div>
 
-        <div className="restriction">
+        <div>
           <h2 id="thre">Պատասխանատվության սահմանափակումը</h2>
 
           <p>
@@ -191,10 +232,10 @@ export const Rules = () => {
           </p>
         </div>
 
-        <div className="forme">
+        <div>
           <h2 id="four">Մեր մասին</h2>
 
-          <p className="textforme">
+          <p>
             Իր հնարավորություններով և ձևով կայքը առաջինն է Հայաստանում։
             Kadr.am-ը հարթակ է, որտեղ կարող եք գտնել Ձեզ անհրաժեշտ միանգամից մի
             քանի ծառայություններ մատուցող անհատների կամ կազմակերպությունների,
@@ -232,7 +273,7 @@ export const Rules = () => {
           </p>
         </div>
 
-        <div className="term">
+        <div>
           <h2 id="five">Համաձայնագրի ժամկետը</h2>
 
           <p>

@@ -14,6 +14,7 @@ const objLink = {
   ]
 }
 
+
 export const Rules = () => {
 
 
@@ -45,8 +46,8 @@ const [active, setActive] = useState(objLink);
     let divfour = document.getElementById("div4")
 
     if(scrollTop<750){
-        divzero.className = 'active'
-        divone.className = ''
+      divzero.className = 'active'
+      divone.className = ''
     }else if(scrollTop>750 && a<1370){
       divzero.className = ''
       divtwo.className = ''
@@ -80,7 +81,8 @@ const [active, setActive] = useState(objLink);
             })}
           </div>
       </div>
-      <div className="rules__section">
+      
+      <main className="rules__section">
         <h1 id="one">Օգտագործման համաձայնագիր</h1>
 
         <div className="rules__agreement" id="rulesone" >
@@ -137,7 +139,7 @@ const [active, setActive] = useState(objLink);
             են առաջանալ կայքի օգտագործման ընթացքում:
           </p>
         </div>
-        <div id="rulestwo">
+        <div>
           <h2 id="two">Կայքում արգելվում է</h2>
           <ol>
             <li>
@@ -292,7 +294,7 @@ const [active, setActive] = useState(objLink);
         </div>
         <div className="pdf">Ներբեռնել PDF ֆալը՝ <img src={require("../../img/icons/pdf.png")} alt="" /></div>
 
-      </div>
+      </main>
     </div>
   );
 };
